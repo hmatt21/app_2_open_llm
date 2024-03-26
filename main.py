@@ -6,8 +6,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from openai import OpenAI
 
 # app config
-st.set_page_config(page_title="BooBoo AI Chatbot", page_icon="🤖")
-st.title('BooBoo AI Chatbot')
+st.set_page_config(page_title="Test AI Chatbot", page_icon="🤖")
+st.title('Test AI Chatbot')
 
 def get_response(user_query, chat_history):
     template = """
@@ -29,7 +29,7 @@ def get_response(user_query, chat_history):
 
 # Session state
 if "chat_history" not in st.session_state:
-    st.session_state.chat_history = [AIMessage(content="Juju Asks - BooBoo AI Answers")]
+    st.session_state.chat_history = [AIMessage(content="How can I help you?")]
 
 # conversation
 for message in st.session_state.chat_history:
